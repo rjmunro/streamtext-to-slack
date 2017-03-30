@@ -26,7 +26,12 @@ function processData(data) {
     sent.push(sentence);
     console.log('sent', sent);
     sendQueue = sendQueue.then(function () {
-      send(sentence);
+      console.log('sending', sentence)
+      return send(sentence);
+    }).catch(function (e) {
+      process.nextTick(function () {
+        throw e;
+      })
     });
   }
 
