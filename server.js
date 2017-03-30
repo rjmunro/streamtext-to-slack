@@ -60,7 +60,7 @@ function removeBackspaces(input) {
 
 function send(text) {
   console.log("Sending", text)
-  return fetch(SLACK_HOOK_URL, {method: 'POST', body: {text : text}});
+  return fetch(SLACK_HOOK_URL, {method: 'POST', body: JSON.stringify({text : text})});
 }
 
 fetch(STREAMTEXT_BASE)
