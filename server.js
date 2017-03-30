@@ -18,7 +18,7 @@ function processData(data) {
   outstanding = removeBackspaces(outstanding);
   console.log('outstanding', outstanding);
 
-  var splitText = outstanding.split('.');
+  var splitText = outstanding.split('. ');
 
   while (splitText.length > 1) {
     console.log('splitText', splitText);
