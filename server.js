@@ -47,8 +47,6 @@ function processData(data) {
   }, 800);
 }
 
-data = require('./test2.json');
-
 function join(data) {
   return data.i.map(i => i.format == 'basic' && decodeURIComponent(i.d).replace(/.\cb/, '') || '::: Unknown format:' + JSON.stringify(i) + ':::').join('');
 }
