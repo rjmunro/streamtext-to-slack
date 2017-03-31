@@ -43,7 +43,7 @@ function processData(data) {
       return res.json()
     })
     .then(processData)
-  }, 500);
+  }, 800);
 }
 
 data = require('./test2.json');
