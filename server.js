@@ -54,11 +54,12 @@ function join(data) {
 
 function removeBackspaces(input) {
   while (match = /\x08+/.exec(input)) {
-    if (match[0].length > match.index) {
+    let removeLength = match[0].length;
+    if (removeLength > match.index) {
       // We've wound back before the beginning
-      console.log("Doh");
+      console.log("Wound back too far!");
     }
-    input = input.substr(0, match.index - match[0].length) + input.substr(match.index + match.length);
+    input = input.substr(0, match.index - removeLength) + input.substr(match.index + removeLength);
   }
   return input;
 }
