@@ -22,7 +22,7 @@ function processData(data) {
 
   while (splitText.length > 1) {
     console.log('splitText', splitText);
-    var sentence = splitText.shift().trim() + '.'
+    let sentence = splitText.shift().trim() + '.'
     sent.push(sentence);
     console.log('sent', sent);
     sendQueue = sendQueue.then(function () {
