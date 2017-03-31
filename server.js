@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+'use strict';
 const fetch = require('node-fetch');
 
 var SLACK_HOOK_URL = process.env.SLACK_HOOK_URL;
