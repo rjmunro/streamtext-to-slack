@@ -2,7 +2,9 @@
 'use strict';
 const fetch = require('node-fetch');
 
-var SLACK_HOOK_URL = process.env.SLACK_HOOK_URL;
+var HOOK_URLS = [
+  process.env.SLACK_HOOK_URL
+];
 
 var STREAMTEXT_BASE = "http://streamtext.net/text-data.ashx?event=" + process.env.STREAMTEXT_EVENT;
 // Standard viewer URL: http://streamtext.net/player?event=[event]
@@ -66,7 +68,9 @@ function removeBackspaces(input) {
 
 function send(text) {
   console.log("Sending", text)
-  return fetch(SLACK_HOOK_URL, {method: 'POST', body: JSON.stringify({text : text})});
+  return Promise.all(HOOK_URLS.map(function (url) {
+    return fetch(url, {method: 'POST', body: JSON.stringify({text: text, })});
+  }));
 }
 
 fetch(STREAMTEXT_BASE)
