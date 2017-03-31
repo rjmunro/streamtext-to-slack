@@ -52,6 +52,7 @@ function join(data) {
 }
 
 function removeBackspaces(input) {
+  let match;
   while (match = /\x08+/.exec(input)) {
     let removeLength = match[0].length;
     if (removeLength > match.index) {
