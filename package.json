@@ -7,7 +7,7 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "node-fetch": "^1.6.3"
+    "node-fetch": "2.1.1"
   },
   "repository": {
     "url": "https://github.com/rjmunro/streamtext-to-slack"
