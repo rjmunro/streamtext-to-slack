@@ -73,7 +73,7 @@ function send(text) {
   }));
 }
 
-fetch(STREAMTEXT_BASE)
+fetch(STREAMTEXT_BASE + '&last=0')
 .then(function (res) {
   return res.json()
 })
