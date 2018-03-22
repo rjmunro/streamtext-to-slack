@@ -6,7 +6,7 @@ var HOOK_URLS = [
   process.env.SLACK_HOOK_URL
 ];
 
-var STREAMTEXT_BASE = "http://streamtext.net/text-data.ashx?event=" + process.env.STREAMTEXT_EVENT;
+var STREAMTEXT_BASE = "http://streamtext.net/text-data.ashx?event=" + process.env.STREAMTEXT_EVENT + "&language=en";
 // Standard viewer URL: http://streamtext.net/player?event=[event]
 
 var last = 0;
