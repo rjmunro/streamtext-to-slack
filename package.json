@@ -1,7 +1,4 @@
 {
-  "//1": "describes your app and its dependencies",
-  "//2": "https://docs.npmjs.com/files/package.json",
-  "//3": "updating this file will download and update your packages",
   "name": "streamtext-slack",
   "version": "0.0.1",
   "description": "Stream stenographer text to slack channel",
@@ -10,19 +7,13 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "^4.15.2",
     "node-fetch": "^1.6.3"
   },
-  "engines": {
-    "node": "6.9.x"
-  },
   "repository": {
-    "url": "https://glitch.com/#!/project/welcome-project"
+    "url": "https://github.com/rjmunro/streamtext-to-slack"
   },
   "license": "MIT",
   "keywords": [
-    "node",
-    "glitch",
-    "express"
+    "node"
   ]
 }
